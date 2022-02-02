@@ -15,12 +15,12 @@ function Pizza() {
 
   return pizzaJson.map((pizza, index)=>(
     <PizzaItem key={index}>
-        <a href=''>
+        <div className="plus-button">
             <div className="pizza-item--img">
                 <img src={pizza.img} width={200} alt='Pizza' />
             </div>
             <div className="pizza-item--add" >+</div>
-        </a>
+        </div>
         <div className="pizza-item--price">R$ {pizza.price}</div>
         <div className="pizza-item--name">{pizza.name}</div>
         <div className="pizza-item--desc">{pizza.description}</div>

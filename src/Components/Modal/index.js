@@ -1,5 +1,6 @@
 import Modal from 'react-modal/lib/components/Modal';
 import React, { useState } from 'react';
+import { ModalStyle } from '../../styles';
 
 Modal.setAppElement('#root');
 
@@ -19,20 +20,51 @@ function PizzaWindowBody() {
 
     const customStyles = {
         content: {
-            top: '50%',
-            left: '50%',
-            right: 'auto'
+            width: '900px',
+            height: '470px',
+            backgroundColor:' #FFF',
+            bordeRadius: '10px',
+            boxShadow: '0px 0px 15px #999',
+            display: 'flex',
+            margin: '20px 0px'
         }
     }
 
   return (
     <div>
-        <Modal
-            isOpen={modalIsOpen}
-            onRequestClose={handleCloseModal}>
-
-            <p> Testando modal!!!!!!!</p>
-
+        <button onClick={handleOpenModal}>Clique para abrir</button>
+        <Modal isOpen={modalIsOpen}onRequestClose={handleCloseModal} style={customStyles}>
+        {/*<div className="pizzaInfo--cancelMobileButton">Voltar</div>*/}
+            <ModalStyle>
+                <div className="pizzaBig">
+                    <img src="https://github.com/barretogustavo/Ecommerce-Pizza/blob/main/images/pizza.png?raw=true" alt='Imagem da pizza' />
+                </div>
+                <div className="pizzaInfo">
+                    <h1>--</h1>
+                    <div className="pizzaInfo--desc">--</div>
+                    <div className="pizzaInfo--sizearea">
+                        <div className="pizzaInfo--sector">Tamanho</div>
+                        <div className="pizzaInfo--sizes">
+                            <div data-key="0" className="pizzaInfo--size">PEQUENA <span>--</span></div>
+                            <div data-key="1" className="pizzaInfo--size">MÉDIO <span>--</span></div>
+                            <div data-key="2" className="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                        </div>
+                    </div>
+                    <div className="pizzaInfo--pricearea">
+                        <div className="pizzaInfo--sector">Preço</div>
+                        <div className="pizzaInfo--price">
+                            <div className="pizzaInfo--actualPrice">R$ --</div>
+                            <div className="pizzaInfo--qtarea">
+                                <button className="pizzaInfo--qtmenos">-</button>
+                                <div className="pizzaInfo--qt">1</div>
+                                <button className="pizzaInfo--qtmais">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="pizzaInfo--addButton">Adicionar ao carrinho</div>
+                    <div className="pizzaInfo--cancelButton" onClick={handleCloseModal}>Cancelar</div>
+                </div>
+            </ModalStyle>
         </Modal>
    </div>
   );

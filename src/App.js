@@ -1,3 +1,4 @@
+import Cart from "./Components/Cart";
 import PizzaWindowBody from "./Components/Modal";
 import Nav from "./Components/Nav";
 import Pizza from "./Components/PizzaItem";
@@ -13,6 +14,7 @@ function App() {
       <PizzaArea>
         <Pizza />
       </PizzaArea>
+      <Cart />
       <PizzaWindowBody />
 
       
