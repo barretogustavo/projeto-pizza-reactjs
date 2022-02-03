@@ -1,22 +1,10 @@
 import Modal from 'react-modal/lib/components/Modal';
-import React, { useState } from 'react';
+import React from 'react';
 import { ModalStyle } from '../../styles';
 
 Modal.setAppElement('#root');
 
-function PizzaWindowBody() {
-
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-
-    const handleOpenModal = (e)=> {
-        e.preventDefault();
-        setModalIsOpen(true);
-        console.log('Rodou')
-    }
-
-    const handleCloseModal = ()=> {
-        setModalIsOpen(false);
-    }
+function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas}) {
 
     const customStyles = {
         content: {
@@ -32,15 +20,17 @@ function PizzaWindowBody() {
 
   return (
     <div>
-        <button onClick={handleOpenModal}>Clique para abrir</button>
-        <Modal isOpen={modalIsOpen}onRequestClose={handleCloseModal} style={customStyles}>
-        {/*<div className="pizzaInfo--cancelMobileButton">Voltar</div>*/}
-            <ModalStyle>
+        <Modal 
+            isOpen={modalIsOpen} 
+            onRequestClose={()=>handleCloseModal()} 
+            style={customStyles}>           
+
+            <ModalStyle currentPizza={currentPizza} pizzas={pizzas}>
                 <div className="pizzaBig">
                     <img src="https://github.com/barretogustavo/Ecommerce-Pizza/blob/main/images/pizza.png?raw=true" alt='Imagem da pizza' />
                 </div>
                 <div className="pizzaInfo">
-                    <h1>--</h1>
+                    <h1>{pizzas[currentPizza].name}</h1>
                     <div className="pizzaInfo--desc">--</div>
                     <div className="pizzaInfo--sizearea">
                         <div className="pizzaInfo--sector">Tamanho</div>
