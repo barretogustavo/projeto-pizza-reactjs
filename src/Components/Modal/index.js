@@ -27,11 +27,11 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas}) 
 
             <ModalStyle currentPizza={currentPizza} pizzas={pizzas}>
                 <div className="pizzaBig">
-                    <img src="https://github.com/barretogustavo/Ecommerce-Pizza/blob/main/images/pizza.png?raw=true" alt='Imagem da pizza' />
+                    <img src={pizzas[currentPizza].img} alt='Imagem da pizza' />
                 </div>
                 <div className="pizzaInfo">
                     <h1>{pizzas[currentPizza].name}</h1>
-                    <div className="pizzaInfo--desc">--</div>
+                    <div className="pizzaInfo--desc">{pizzas[currentPizza].description}</div>
                     <div className="pizzaInfo--sizearea">
                         <div className="pizzaInfo--sector">Tamanho</div>
                         <div className="pizzaInfo--sizes">
@@ -43,7 +43,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas}) 
                     <div className="pizzaInfo--pricearea">
                         <div className="pizzaInfo--sector">Preço</div>
                         <div className="pizzaInfo--price">
-                            <div className="pizzaInfo--actualPrice">R$ --</div>
+                            <div className="pizzaInfo--actualPrice">R$ {pizzas[currentPizza].price}</div>
                             <div className="pizzaInfo--qtarea">
                                 <button className="pizzaInfo--qtmenos">-</button>
                                 <div className="pizzaInfo--qt">1</div>
