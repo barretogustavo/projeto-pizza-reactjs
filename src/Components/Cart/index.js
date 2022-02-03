@@ -30,7 +30,7 @@ function Cart({cartList, pizzas}) {
             </div>
         </div>
     </CartMenu>
-    :<i><BsFillCartXFill size={40} style={{marginLeft:30, color:'#CCC', cursor:'not-allowed'}}/></i>
+    :<i><BsFillCartXFill size={40} style={{marginLeft:60, color:'#CCC', cursor:'not-allowed'}}/></i>
   );
 }
 

@@ -12,7 +12,7 @@ align-items:center;
 
     h1{
         font-size:30px;
-        margin-left:30px;
+        margin-left:60px;
     }
 
 `;
@@ -323,5 +323,34 @@ border-bottom-right-radius:60px;
     }
 
 
+
+`;
+
+export const FooterStyle = styled.footer`
+    auto
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction: column;
+    border-top:solid 1px #CCC;
+
+        a:visited{
+            color:#000;
+        }
+        
+        p{
+            font-size:16px;
+            margin-top:30px;
+        }
+
+        div{
+            width: 90px;
+            display: flex;
+            justify-content:space-around;
+                i{
+                    font-size:20px;
+                }
+        }
 
 `;

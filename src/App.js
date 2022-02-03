@@ -6,6 +6,7 @@ import PizzaItem from "./Components/PizzaItem";
 import { PizzaArea, Main } from "./styles";
 import GlobalStyle from './styles/global';
 import './App.css';
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
           <PizzaItem pizzas={pizzas} handleOpenModal={handleOpenModal}  />
         </PizzaArea>
     </Main>
+    <Footer />
     
 
       
