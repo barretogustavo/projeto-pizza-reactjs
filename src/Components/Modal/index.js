@@ -1,5 +1,5 @@
 import Modal from 'react-modal/lib/components/Modal';
-import React from 'react';
+import React, {useState} from 'react';
 import { ModalStyle } from '../../styles';
 
 Modal.setAppElement('#root');
@@ -17,6 +17,8 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
             margin: '20px 0px',
         }
     }
+    
+    const [quantityPizza, setQuantityPizza] = useState(0);
 
   return (
     <div>
@@ -25,7 +27,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
             onRequestClose={()=>handleCloseModal()} 
             style={customStyles}>           
 
-            <ModalStyle currentPizza={currentPizza} pizzas={pizzas}>
+            <ModalStyle currentPizza={currentPizza} pizzas={pizzas} >
                 <div className="pizzaBig">
                     <img src={pizzas[currentPizza].img} alt='Imagem da pizza' />
                 </div>
@@ -35,9 +37,9 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
                     <div className="pizzaInfo--sizearea">
                         <div className="pizzaInfo--sector">Tamanho</div>
                         <div className="pizzaInfo--sizes">
-                            <div data-key="0" className="pizzaInfo--size">PEQUENA <span>--</span></div>
-                            <div data-key="1" className="pizzaInfo--size">MÉDIO <span>--</span></div>
-                            <div data-key="2" className="pizzaInfo--size selected">GRANDE <span>--</span></div>
+                            <div data-key="0" className="pizzaInfo--size">PEQUENA <span>{pizzas[currentPizza].sizes[0]}</span></div>
+                            <div data-key="1" className="pizzaInfo--size">MÉDIO <span>{pizzas[currentPizza].sizes[1]}</span></div>
+                            <div data-key="2" className="pizzaInfo--size selected">GRANDE <span>{pizzas[currentPizza].sizes[2]}</span></div>
                         </div>
                     </div>
                     <div className="pizzaInfo--pricearea">
@@ -45,13 +47,13 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
                         <div className="pizzaInfo--price">
                             <div className="pizzaInfo--actualPrice">R$ {pizzas[currentPizza].price}</div>
                             <div className="pizzaInfo--qtarea">
-                                <button className="pizzaInfo--qtmenos">-</button>
-                                <div className="pizzaInfo--qt">1</div>
-                                <button className="pizzaInfo--qtmais">+</button>
+                                <button className="pizzaInfo--qtmenos" onClick={()=> quantityPizza > 0 ? setQuantityPizza( quantityPizza - 1 ) : console.log("Não é possivel diminuir menos que zero!") }>-</button>
+                                <div className="pizzaInfo--qt">{quantityPizza}</div>
+                                <button className="pizzaInfo--qtmais" onClick={()=>setQuantityPizza( quantityPizza + 1 )}>+</button>
                             </div>
                         </div>
                     </div>
-                    <div className="pizzaInfo--addButton" onClick={()=>addToCart(currentPizza, cartList)}>Adicionar ao carrinho</div>
+                    <div className="pizzaInfo--addButton" onClick={()=>addToCart(currentPizza, cartList, quantityPizza)}>Adicionar ao carrinho</div>
                     <div className="pizzaInfo--cancelButton" onClick={handleCloseModal}>Cancelar</div>
                 </div>
             </ModalStyle>

@@ -4,6 +4,7 @@ import CartItem from '../CartItem';
 import { BsFillCartXFill } from 'react-icons/bs';
 
 function Cart({cartList, pizzas}) {
+    
   return (
       cartList.length > 0 ?
     <CartMenu>

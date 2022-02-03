@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "./Components/Cart";
 import PizzaWindowBody from "./Components/Modal";
 import Nav from "./Components/Nav";
@@ -23,6 +23,8 @@ function App() {
   //Modal events & maping
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentPizza, setCurrentPizza] = useState(0);
+  const [cartList, setCartList] = useState([]);
+  const [totalCart, setTotalCart] = useState([]);
 
     const handleOpenModal = (e, id)=> {
         e.preventDefault();
@@ -37,17 +39,26 @@ function App() {
     }
 
     //Inserting pizzas in the cart
-    const [cartList, setCartList] = useState([]);
-
-    const addToCart = (currentPizza, cartList)=>{
-    
-        const newCartList = [currentPizza, ...cartList ];
+    const addToCart = (currentPizza, cartList, quantityPizza)=>{
+        const newCartList = [...cartList, currentPizza];
         setCartList(newCartList);
+        handleCloseModal();
         console.log('Lista de pizzas: ', newCartList);
+        console.log('Quantidade da pizza X: ', quantityPizza);
+    }
+    
+    //Calculating
+    const calculatingTotalCart = ()=>{
+      pizzas.map(()=>{
+        console.log(pizzas[0].price);
+      });
+
+      
     }
 
   return (
     <div className="App">
+      <button onClick={calculatingTotalCart}> calcular log</button>
     <GlobalStyle />
     <Nav />
     <Main>

@@ -5,8 +5,8 @@ function CartItem({cartList, pizzas}) {
     console.log('Passando de mão em mão: ', cartList);
     
   return cartList.map((cartList)=>(
-              
-    <div className="cart--item" cartList={cartList} pizzas={pizzas} key={cartList}>
+
+    <div className="cart--item" pizzas={pizzas} key={cartList}>
         <img src={pizzas[cartList].img} alt="Miniatura pizza" />
         <div className="cart--item-nome">{pizzas[cartList].name}</div>
         <div className="cart--item--qtarea">
