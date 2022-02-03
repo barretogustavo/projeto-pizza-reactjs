@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Cart from "./Components/Cart";
 import PizzaWindowBody from "./Components/Modal";
 import Nav from "./Components/Nav";
@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={calculatingTotalCart}> calcular log</button>
+
     <GlobalStyle />
     <Nav />
     <Main>

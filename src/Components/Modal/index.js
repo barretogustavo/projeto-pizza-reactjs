@@ -15,6 +15,8 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
             boxShadow: '0px 0px 15px #999',
             display: 'flex',
             margin: '20px 0px',
+            top: '25%',
+            left: '25%'
         }
     }
     
@@ -22,7 +24,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
 
   return (
     <div>
-        <Modal 
+        <Modal
             isOpen={modalIsOpen} 
             onRequestClose={()=>handleCloseModal()} 
             style={customStyles}>           

@@ -235,8 +235,10 @@ transition:all ease .2s;
 overflow-x:hidden;
 margin-bottom:20px;
 padding: 30px;
+border-bottom-left-radius:60px;
+border-bottom-right-radius:60px;
 
-    .cart--area {
+    .cart--area { 
         padding:20px;
     }
 
