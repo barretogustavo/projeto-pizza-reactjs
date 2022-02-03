@@ -316,6 +316,10 @@ padding: 30px;
             }
     }
 
+    .icon-empty-cart{
+        font-size:50px;
+    }
+
 
 
 `;

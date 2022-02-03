@@ -20,6 +20,7 @@ function App() {
     {id:7, name:'Chocolate', img:'https://github.com/barretogustavo/Ecommerce-Pizza/blob/main/images/pizza7.png?raw=true', price:22.36, sizes:['320g', '530g', '860g'], description:'Você sabia que Nutella é a marca e o correto é Creme de avelã? Nem eu.'}
   ]);
 
+  //Modal events & maping
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentPizza, setCurrentPizza] = useState(0);
 
@@ -35,12 +36,22 @@ function App() {
         setModalIsOpen(false);
     }
 
+    //Inserting pizzas in the cart
+    const [cartList, setCartList] = useState([]);
+
+    const addToCart = (currentPizza, cartList)=>{
+    
+        const newCartList = [currentPizza, ...cartList ];
+        setCartList(newCartList);
+        console.log('Lista de pizzas: ', newCartList);
+    }
+
   return (
     <div className="App">
     <GlobalStyle />
     <Nav />
     <Main>
-        <Cart />
+        <Cart cartList={cartList} pizzas={pizzas} />
         <PizzaArea className="pizza-area-css">
           <PizzaItem pizzas={pizzas} handleOpenModal={handleOpenModal}  />
         </PizzaArea>
@@ -48,11 +59,13 @@ function App() {
     
 
       
-      <PizzaWindowBody 
+      <PizzaWindowBody
         modalIsOpen={modalIsOpen} 
         handleCloseModal={handleCloseModal} 
         currentPizza={currentPizza} 
-        pizzas={pizzas} />
+        pizzas={pizzas} 
+        cartList={cartList}
+        addToCart={addToCart} />
 
     </div>
   );
