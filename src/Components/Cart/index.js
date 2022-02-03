@@ -1,11 +1,10 @@
 import React from 'react';
-import { AsideMenu } from '../../styles';
+import { CartMenu } from '../../styles';
 
 function Cart() {
   return (
-    <AsideMenu>
+    <CartMenu>
         <div className="cart--area">
-            <div className="menu-closer">❌</div>
             <h1>Suas Pizzas</h1>
             <div className="cart">
                 <div className="cart--item">
@@ -34,7 +33,7 @@ function Cart() {
                 <div className="cart--finalizar">Finalizar a compra</div>
             </div>
         </div>
-    </AsideMenu>
+    </CartMenu>
   );
 }
 

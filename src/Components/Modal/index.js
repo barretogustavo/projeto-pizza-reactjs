@@ -14,7 +14,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas}) 
             bordeRadius: '10px',
             boxShadow: '0px 0px 15px #999',
             display: 'flex',
-            margin: '20px 0px'
+            margin: '20px 0px',
         }
     }
 

@@ -4,7 +4,7 @@ export const NavMenu = styled.nav`
 
 width:100%;
 height:50px;
-margin: 30px 0px 30px 0px ;
+margin: 0px 0px 30px 0px ;
 border-bottom:1px solid #eee;
 display:flex;
 justify-content:flex-start;
@@ -17,13 +17,16 @@ align-items:center;
 
 `;
 
+export const Main = styled.main`
+width: 100%;
+flex: 1;
+padding: 20px;
+`;
+
 export const PizzaArea = styled.div`
-    display: flex;
-    flex-wrap:wrap;
 `;
 
 export const PizzaItem = styled.div`
-
 text-align: center;
 max-width:250px;
 font-family:'Hepta Slab', Helvetica, Arial;
@@ -224,16 +227,14 @@ display: flex;
 
 `;
 
-export const AsideMenu = styled.aside`
+export const CartMenu = styled.div`
 background-color:#9ccbe6;
-width:30vw;
-height: 100vh;
+width:100%;
 font-family:'Hepta Slab', Helvetica, Arial;
 transition:all ease .2s;
 overflow-x:hidden;
-
-position:absolute;
-left: calc(100% - 30vw);
+margin-bottom:20px;
+padding: 30px;
 
     .cart--area {
         padding:20px;
