@@ -20,7 +20,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
         }
     }
     
-    const [quantityPizza, setQuantityPizza] = useState(0);
+    const [quantityPizza, setQuantityPizza] = useState(1);
 
   return (
     <div>
@@ -49,7 +49,7 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
                         <div className="pizzaInfo--price">
                             <div className="pizzaInfo--actualPrice">R$ {pizzas[currentPizza].price}</div>
                             <div className="pizzaInfo--qtarea">
-                                <button className="pizzaInfo--qtmenos" onClick={()=> quantityPizza > 0 ? setQuantityPizza( quantityPizza - 1 ) : console.log("Não é possivel diminuir menos que zero!") }>-</button>
+                                <button className="pizzaInfo--qtmenos" onClick={()=> quantityPizza > 1 ? setQuantityPizza( quantityPizza - 1 ) : handleCloseModal() }>-</button>
                                 <div className="pizzaInfo--qt">{quantityPizza}</div>
                                 <button className="pizzaInfo--qtmais" onClick={()=>setQuantityPizza( quantityPizza + 1 )}>+</button>
                             </div>

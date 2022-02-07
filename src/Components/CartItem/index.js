@@ -1,8 +1,6 @@
 import React from 'react';
 
 function CartItem({cartList, pizzas}) {
-
-    console.log('Passando de mão em mão: ', cartList);
     
   return cartList.map((cartList)=>(
 

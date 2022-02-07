@@ -43,18 +43,16 @@ function App() {
     const addToCart = (currentPizza, cartList, quantityPizza)=>{
         const newCartList = [...cartList, currentPizza];
         setCartList(newCartList);
+
+        //Calculating
+        const newPriceList = [...totalCart, pizzas[currentPizza].price * quantityPizza];
+        setTotalCart(newPriceList);
+
+
         handleCloseModal();
+        console.log('Preços: ', newPriceList);
         console.log('Lista de pizzas: ', newCartList);
         console.log('Quantidade da pizza X: ', quantityPizza);
-    }
-    
-    //Calculating
-    const calculatingTotalCart = ()=>{
-      pizzas.map(()=>{
-        console.log(pizzas[0].price);
-      });
-
-      
     }
 
   return (
@@ -63,7 +61,7 @@ function App() {
     <GlobalStyle />
     <Nav />
     <Main>
-        <Cart cartList={cartList} pizzas={pizzas} />
+        <Cart cartList={cartList} pizzas={pizzas} totalCart={totalCart} />
         <PizzaArea className="pizza-area-css">
           <PizzaItem pizzas={pizzas} handleOpenModal={handleOpenModal}  />
         </PizzaArea>

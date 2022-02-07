@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { CartMenu } from '../../styles';
 import CartItem from '../CartItem';
 import { BsFillCartXFill } from 'react-icons/bs';
 
-function Cart({cartList, pizzas}) {
+function Cart({cartList, pizzas, totalCart}) {
+
+    const [subTotal, setSubtotal] = useState(0);
+    
+    //Whenever cartList run, the subtotal is calculed
+    useEffect(()=>{
+        const calculating = totalCart.reduce((a, v) =>  a = a + v , 0 );
+        setSubtotal(calculating);
+        console.log('Subtotal: ', calculating )
+        
+    }, [cartList]);
     
   return (
       cartList.length > 0 ?
@@ -16,15 +26,15 @@ function Cart({cartList, pizzas}) {
             <div className="cart--details">
                 <div className="cart--totalitem subtotal">
                     <span>Subtotal</span>
-                    <span>R$ --</span>
+                    <span>R$ {subTotal.toFixed(2)}</span>
                 </div>
                 <div className="cart--totalitem desconto">
                     <span>Desconto (-10%)</span>
-                    <span>R$ --</span>
+                    <span>R$ {(subTotal * 0.1).toFixed(2)}</span>
                 </div>
                 <div className="cart--totalitem total big">
                     <span>Total</span>
-                    <span>R$ --</span>
+                    <span>R$ {(subTotal - (subTotal * 0.1)).toFixed(2)}</span>
                 </div>
                 <div className="cart--finalizar">Finalizar a compra</div>
             </div>

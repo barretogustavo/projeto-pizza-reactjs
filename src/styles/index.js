@@ -83,7 +83,7 @@ margin:0 auto 50px auto;
     }
     .pizza-item--desc {
         font-family: 'Hepta slab';
-        font-size:13px;
+        font-size:14px;
         color:#555;
         margin-top:10px;
     }
