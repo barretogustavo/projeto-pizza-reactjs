@@ -19,7 +19,7 @@ function Cart({cartList, pizzas, totalCart}) {
       cartList.length > 0 ?
     <CartMenu>
         <div className="cart--area">
-            <h1>Suas Pizzas</h1>
+            <h1>Suas Pizzas:</h1>
             <div className="cart">
                 <CartItem cartList={cartList} pizzas={pizzas} />
             </div>
