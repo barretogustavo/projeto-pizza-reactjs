@@ -26,6 +26,7 @@ function App() {
   const [currentPizza, setCurrentPizza] = useState(0);
   const [cartList, setCartList] = useState([]);
   const [totalCart, setTotalCart] = useState([]);
+  const [quantityPizza, setQuantityPizza] = useState(1);
 
     const handleOpenModal = (e, id)=> {
         e.preventDefault();
@@ -76,7 +77,9 @@ function App() {
         currentPizza={currentPizza} 
         pizzas={pizzas} 
         cartList={cartList}
-        addToCart={addToCart} />
+        addToCart={addToCart}
+        quantityPizza={quantityPizza}
+        setQuantityPizza={setQuantityPizza} />
 
     </div>
   );

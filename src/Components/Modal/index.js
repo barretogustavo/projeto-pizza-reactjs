@@ -4,7 +4,7 @@ import { ModalStyle } from '../../styles';
 
 Modal.setAppElement('#root');
 
-function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, cartList, addToCart}) {
+function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, cartList, addToCart, setQuantityPizza, quantityPizza}) {
 
     const customStyles = {
         content: {
@@ -19,8 +19,6 @@ function PizzaWindowBody({modalIsOpen, handleCloseModal, currentPizza, pizzas, c
             left: '25%'
         }
     }
-    
-    const [quantityPizza, setQuantityPizza] = useState(1);
 
   return (
     <div>
