@@ -1,71 +1,48 @@
-# Getting Started with Create React App
+## Scripts disponíveis
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Rode `npm start` no diretório raiz do projeto.
 
-## Available Scripts
+Abra [http://localhost:3000](http://localhost:3000) para ver o projeto em seu navegador.
 
-In the project directory, you can run:
+# E-commerce de Pizzaria criado com ReactJS
+E-commerce completo com todos os componentes necessários, tais como carrinho de compras, aumentar quantidade de item específico, descontos, valor total, imagens dos produtos etc.
 
-### `npm start`
+## Acesse o link e teste o projeto:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Veja o projeto pronto: https://barretogustavo.github.io/Ecommerce-Pizza/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Para desenvolver esse projeto, eu utilizei:
 
-### `npm test`
+ReactJS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Conhecimento adquirido:
 
-### `npm run build`
+Durante o desenvolvimento deste projeto, eu aprendi muito sobre o método .map do Javascript. Utilizei este método para percorrer o objeto de pizzas para mostrá-las na tela. Também pude aprender mais sobre Responsividade e Clean Code.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Desafios que tive:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Durante o desenvolvimento desse e-commerce, meu maior desafio foi manter o código limpo. Entretanto, me aprofundei nos estudos de boas-práticas e consegui fazer um código fácil de entender caso seja necessário um refactor.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Confira abaixo imagens das versões para desktop e mobile, respectivamente:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tela principal
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![image](https://user-images.githubusercontent.com/81381789/144499303-2941ceef-a0fc-4ac6-9c9a-b19fda60c7bd.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Escolhendo uma pizza
 
-## Learn More
+![image](https://user-images.githubusercontent.com/81381789/144499371-a2d763a5-0993-4515-87fb-4c8260b31b8a.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Visualizando o Carrinho e o Valor total
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/81381789/144499571-536336a4-4991-429f-93e7-01a0110403e5.png)
 
-### Code Splitting
+## Experiência mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![image](https://user-images.githubusercontent.com/81381789/144499644-2a10cbc4-5dc5-4512-9798-edf0f1831dd0.png)
 
-### Analyzing the Bundle Size
+## Carrinho de compras no mobile
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# projeto-pizza-reactjs
+![image](https://user-images.githubusercontent.com/81381789/144499743-c1ad9a10-c9e5-47df-bcb3-19690c3403c4.png)
